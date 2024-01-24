@@ -1,0 +1,108 @@
+/*Reseteo CSS*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+header,main,aside{
+    border: 1px solid rgb(150, 29, 29)
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "main main aside aside"
+    "main main aside aside"
+    "main main aside aside"
+    "footer footer footer footer";
+    grid-template-rows: 141px 2fr 2fr 2fr auto;
+    grid-template-columns: auto 3fr 100px auto;
+
+    
+    
+  
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+   
+    
+}
+
+main section{
+    background-color: rgb(214, 206, 206);
+    height: 490px;
+
+}
+main section h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+main section h2{
+
+ font-family: 'Roboto', sans-serif;
+    font-size: large;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+aside{
+    grid-area: aside;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to top, rgb(37, 37, 112), rgb(115, 33, 33));
+    display: flex;
+}
+aside section p{
+   color: antiquewhite;
+}
+
+footer{
+    display: flex;
+    grid-area: footer;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    
+} 
+form{
+    font-family: 'Roboto', sans-serif;
+    font-weight:700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset{
+    padding: 20px;
+    
+}
+.campos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form input{
+    border-radius: 5px;
+
+}
+.button{
+   
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
