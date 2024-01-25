@@ -110,3 +110,15 @@ form input{
     display: flex;
     justify-content: center;
 }
+
+.provisorio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.parrafoProvisorio{
+    background-color: rgb(64, 64, 181);
+    font-family: 'Roboto', sans-serif;
+    font-weight:700;
+}
