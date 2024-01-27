@@ -10,7 +10,6 @@ header,main,aside{
 }
 body{
     display: grid;
-    grid-template-rows: 141px 2fr 2fr 2fr auto;
     grid-template-columns: 1fr 3fr 100px auto;
     grid-template-areas: 
     "header header header header"
@@ -25,10 +24,11 @@ body{
 header{
     grid-area: header;
     position: relative;
+    height: 141px;
 }
 
 .navbar {
-    z-index: 1;
+    z-index: 2;
     position: relative;
   }
 
@@ -85,13 +85,18 @@ aside section p{
 footer{
     display: flex;
     grid-area: footer;
-    font-family: 'Roboto', sans-serif;
     height: 60px;
     align-items: center;
     justify-content: center;
     background-color: rgb(135, 129, 129);
     
 } 
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+    font-size:larger;
+    font-weight: 700;
+}
 
 /*contacto*/
 form{
@@ -153,6 +158,21 @@ img.d-block {
     height: auto;
   }
  
+.carousel-container { 
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-height: 490px; 
+}
+
+#carouselExample {
+    position: relative;
+    
+    z-ind
+  z-index: 1; 
+  }
+  
+
 @media (max-width: 767px) {
     footer {
       height: auto; 
