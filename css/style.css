@@ -1,3 +1,4 @@
+
 /*Reseteo CSS*/
 *{
     padding: 0;
@@ -9,33 +10,50 @@ header,main,aside{
 }
 body{
     display: grid;
+    grid-template-rows: 141px 2fr 2fr 2fr auto;
+    grid-template-columns: 1fr 3fr 100px auto;
     grid-template-areas: 
     "header header header header"
     "main main aside aside"
     "main main aside aside"
     "main main aside aside"
     "footer footer footer footer";
-    grid-template-rows: 141px 2fr 2fr 2fr auto;
-    grid-template-columns: auto 3fr 100px auto;
 
-    
-    
+      
   
 }
 header{
     grid-area: header;
+    position: relative;
 }
-main{
-    grid-area: main;
-   
-    
+
+.navbar {
+    z-index: 1;
+    position: relative;
+  }
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+ } 
+
+
+.navbar-toggler {
+  border: none;
 }
+
+ main{
+ grid-area: main;
+
+ }
+
 
 main section{
     background-color: rgb(214, 206, 206);
     height: 490px;
 
 }
+
 main section h1{
     font-family: 'Roboto', sans-serif;
     font-size: larger;
@@ -43,6 +61,7 @@ main section h1{
     display: flex;
     justify-content: center;
 }
+
 main section h2{
 
  font-family: 'Roboto', sans-serif;
@@ -51,7 +70,6 @@ main section h2{
     display: flex;
     justify-content: center;
 }
-
 
 
 aside{
@@ -68,22 +86,27 @@ footer{
     display: flex;
     grid-area: footer;
     font-family: 'Roboto', sans-serif;
-    background-color: white;
     height: 60px;
     align-items: center;
     justify-content: center;
+    background-color: rgb(135, 129, 129);
     
 } 
+
+/*contacto*/
 form{
     font-family: 'Roboto', sans-serif;
     font-weight:700;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.1); 
+    border-top: 1px solid rgb(222, 226, 230);
 }
 
 fieldset{
     padding: 20px;
+
     
 }
 .campos{
@@ -106,11 +129,12 @@ form input{
     flex-direction: column;
     align-items: center
 }
+/*horarios*/
 .horarios{
     display: flex;
     justify-content: center;
 }
-
+/*profesores*/
 .provisorio{
     display: flex;
     justify-content: center;
@@ -122,3 +146,30 @@ form input{
     font-family: 'Roboto', sans-serif;
     font-weight:700;
 }
+
+/* Galeria*/
+img.d-block {
+    width: 100%;
+    height: auto;
+  }
+ 
+@media (max-width: 767px) {
+    footer {
+      height: auto; 
+      padding: 10px; 
+      text-align: center; 
+    }
+  
+    footer p {
+      font-size: 14px; 
+    }
+  
+    form {
+      padding: 10px; 
+    }
+  
+    form input, form textarea, form button {
+      width: 100%; 
+      margin-bottom: 10px;*/
+    }
+  }
