@@ -21,10 +21,12 @@ body{
       
   
 }
+/*Header*/
 header{
     grid-area: header;
     position: relative;
-    height: 141px;
+    height: auto;
+
 }
 
 .navbar {
@@ -42,6 +44,9 @@ header{
   border: none;
 }
 
+ 
+/*main*/
+
  main{
  grid-area: main;
 
@@ -51,24 +56,52 @@ header{
 main section{
     background-color: rgb(214, 206, 206);
     height: 490px;
+    position: relative;
+    overflow: hidden;
 
 }
 
 main section h1{
     font-family: 'Roboto', sans-serif;
+    color:rgb(15, 54, 55);
     font-size: larger;
     font-weight: 700;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
+    transition: .5s;
 }
 
 main section h2{
 
- font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color:rgb(15, 54, 55);
     font-size: large;
     font-weight: 700;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
+    transition: .5s;
+}
+
+main section img{
+    transition: .5s;
+}
+
+main section h1:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(115, 33, 33) ;
+
+}
+
+main section h2:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(115, 33, 33);
+
+}
+main section img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px  rgb(115, 33, 33);
 }
 
 
@@ -76,10 +109,19 @@ aside{
     grid-area: aside;
     font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(to top, rgb(37, 37, 112), rgb(115, 33, 33));
+    padding-top: 10px;
     display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 aside section p{
    color: antiquewhite;
+   transition: .5s;
+}
+
+aside section p:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px antiquewhite;
 }
 
 footer{
@@ -99,9 +141,40 @@ footer p{
 }
 
 /*contacto*/
-form{
+
+.fontStyle{
     font-family: 'Roboto', sans-serif;
     font-weight:700;
+    font-size: xx-large;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.paddingTB{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.col-lg-12,
+.col-lg-6 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+paddingT{
+    padding-top: 50px;
+}
+.centrar{
+    text-align: center;
+}
+form{
+   
+    font-family: 'Roboto', sans-serif;
+    font-weight:700;
+    font-size: large;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,11 +182,6 @@ form{
     border-top: 1px solid rgb(222, 226, 230);
 }
 
-fieldset{
-    padding: 20px;
-
-    
-}
 .campos{
     display: flex;
     flex-direction: column;
@@ -132,8 +200,10 @@ form input{
     margin: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
 }
+
+
 /*horarios*/
 .horarios{
     display: flex;
@@ -167,13 +237,32 @@ img.d-block {
 
 #carouselExample {
     position: relative;
-    
-    z-ind
-  z-index: 1; 
+    z-index: 1; 
   }
   
 
 @media (max-width: 767px) {
+
+    main section{
+        height: 400px;
+    }
+   
+   main section h1{
+    font-size: medium;
+   }
+
+   main section h2{
+    font-size: medium;
+   }
+
+   aside{
+    height: auto;
+   }
+
+   aside p{
+    font-size: small;
+   }
+   
     footer {
       height: auto; 
       padding: 10px; 
@@ -184,12 +273,8 @@ img.d-block {
       font-size: 14px; 
     }
   
-    form {
-      padding: 10px; 
+    /*contacto imagen*/
+    .col-lg-6 img {
+        display: none;
+
     }
-  
-    form input, form textarea, form button {
-      width: 100%; 
-      margin-bottom: 10px;*/
-    }
-  }
