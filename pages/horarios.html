@@ -27,7 +27,8 @@
 
    
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100 bordeau-page">
+  
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -63,16 +64,166 @@
         </div>
       </nav>
      </header>
+
      <main>
-       <div class="horarios">
-      <img src="../img/horarios.jpg" class="img-fluid" alt="horario" height="800px">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 text-center">
+            <h1 class="mb-0">Gimnasio</h1>
+          </div>
+          <div class="col-auto">
+            <img src="../img/logo.png" alt="Logo" class="img-fluid rounded" style="max-height: 50px;">
+          </div>
+          <div class="col-12 text-center">
+            <h1 class="mb-0">Femenino</h1>
+          </div>
+        </div>
+      </div>
+
+          <!-- Grilla de Horarios para pantallas grandes -->
+  
+      <div class="row mt-4 d-none d-md-flex">
+       <div class="col-12">
+       <div class="grilla">
+             <!-- Fila 1 -->
+        <div class="row fila1">
+          <div class="col-2 celula horarios text-center">Horarios</div>
+          <div class="col-2 celula lunes text-center">Lunes</div>
+          <div class="col-2 celula martes text-center">Martes</div>
+          <div class="col-2 celula miercoles text-center">Miércoles</div>
+          <div class="col-2 celula jueves text-center">Jueves</div>
+          <div class="col-2 celula viernes text-center">Viernes</div>
+        </div>
+
+        <!-- Fila 2 -->
+        <div class="row fila2">
+          <div class="col-2 celula">8:30</div>
+          <div class="col-2 celula actividad text-center">Pilates</div>
+          <div class="col-2 celula sin-actividad"></div>
+          <div class="col-2 celula actividad text-center">Full Body</div>
+          <div class="col-2 celula sin-actividad"></div>
+          <div class="col-2 celula actividad text-center">Pilates</div>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="row fila3">
+          <div class="col-2 celula">11:00</div>
+          <div class="col-2 celula sin-actividad"></div>
+          <div class="col-2 celula actividad text-center">Personas Mayores</div>
+          <div class="col-2 celula sin-actividad"></div>
+          <div class="col-2 celula actividad text-center">Personas Mayores</div>
+          <div class="col-2 celula sin-actividad"></div>
+        </div>
+
+        <!-- Fila 4 -->
+        <div class="row fila4">
+          <div class="col-2 celula">19:00</div>
+          <div class="col-2 celula actividad text-center">Power Gap</div>
+          <div class="col-2 celula actividad text-center">Zumba</div>
+          <div class="col-2 celula actividad text-center">Funcional Fit</div>
+          <div class="col-2 celula actividad text-center">Gym de Boxing</div>
+          <div class="col-2 celula actividad text-center">Funcional</div>
+        </div>
+
+        <!-- Fila 5 -->
+        <div class="row fila5">
+          <div class="col-2 celula">19:55</div>
+          <div class="col-2 celula actividad text-center">Spinning</div>
+          <div class="col-2 celula sin-actividad"></div>
+          <div class="col-2 celula actividad text-center">Spinning</div>
+          <div class="col-2 celula sin-actividad"></div>
+          <div class="col-2 celula actividad text-center">Spinning</div>
+        </div>
+
+        <!-- Fila 6 -->
+        <div class="row fila6">
+          <div class="col-2 celula">20:00</div>
+          <div class="col-2 celula actividad text-center">Funcional Box</div>
+          <div class="col-2 celula actividad text-center">Funcional Fit</div>
+          <div class="col-2 celula actividad text-center">Gym de Boxing</div>
+          <div class="col-2 celula actividad text-center">Zumba</div>
+          <div class="col-2 celula sin-actividad"></div>
+        </div>
+       </div>
+     </div>
+    </div>
+       
+
+     <!-- Lista de Horarios pantallas móviles -->
+<div class="container mt-4 d-md-none">
+  <div class="list-group">
+    
+    <!-- Lunes -->
+    <a href="#lunesCollapse" class="list-group-item list-group-item-action" data-bs-toggle="collapse">
+      Lunes
+    </a>
+    <div class="collapse" id="lunesCollapse">
+      <div class="list-group">
+        <a href="#lunesCollapse" class="list-group-item">8:30 - Pilates</a>
+        <a href="#lunesCollapse" class="list-group-item">19:00 - Power Gap</a>
+        <a href="#lunesCollapse" class="list-group-item">19:55 - Spinning</a>
+        <a href="#lunesCollapse" class="list-group-item">20:00 - Funcional Box</a>
+      </div>
     </div>
 
-     </main>
+    <!-- Martes -->
+    <a href="#martesCollapse" class="list-group-item list-group-item-action" data-bs-toggle="collapse">
+      Martes
+    </a>
+    <div class="collapse" id="martesCollapse">
+      <div class="list-group">
+        <a href="#martesCollapse" class="list-group-item">11:00 - Personas Mayores</a>
+        <a href="#martesCollapse" class="list-group-item">19:00 - Zumba</a>
+        <a href="#martesCollapse" class="list-group-item">20:00 - Funcional Fit</a>
+      </div>
+    </div>
 
-      <aside>
-        <section>
-            <p>PASE LIBRE</p>
+    <!-- Miércoles -->
+    <a href="#miercolesCollapse" class="list-group-item list-group-item-action" data-bs-toggle="collapse">
+      Miércoles
+    </a>
+    <div class="collapse" id="miercolesCollapse">
+      <div class="list-group">
+        <a href="#miercolesCollapse" class="list-group-item">8:30 - Full Body</a>
+        <a href="#miercolesCollapse" class="list-group-item">19:00 - Funcional Fit</a>
+        <a href="#miercolesCollapse" class="list-group-item">19:55 - Spinning</a>
+        <a href="#miercolesCollapse" class="list-group-item">20:00 - Gym de Boxing</a>
+      </div>
+    </div>
+
+    <!-- Jueves -->
+    <a href="#juevesCollapse" class="list-group-item list-group-item-action" data-bs-toggle="collapse">
+      Jueves
+    </a>
+    <div class="collapse" id="juevesCollapse">
+      <div class="list-group">
+        <a href="#juevesCollapse" class="list-group-item">11:00 - Personas Mayores</a>
+        <a href="#juevesCollapse" class="list-group-item">19:00 - Gym de Boxing</a>
+        <a href="#juevesCollapse" class="list-group-item">20:00 - Zumba</a>
+      </div>
+    </div>
+
+    <!-- Viernes -->
+    <a href="#viernesCollapse" class="list-group-item list-group-item-action" data-bs-toggle="collapse">
+      Viernes
+    </a>
+    <div class="collapse" id="viernesCollapse">
+      <div class="list-group">
+        <a href="#viernesCollapse" class="list-group-item">8:30 - Pilates</a>
+        <a href="#viernesCollapse" class="list-group-item">19:00 - Funcional</a>
+        <a href="#viernesCollapse" class="list-group-item">19:55 - Spinning</a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</main>
+
+  
+  <aside>
+     <section>
+            <p>PASE LIBRE ENTRENAMIENTO DE BOXEO Y SALA COMPLETA DE APARATOS</p>
         </section>
 
     </aside>

@@ -3,7 +3,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 header,main,aside{
     border: 1px solid rgb(150, 29, 29)
@@ -16,10 +16,12 @@ body{
     "main main aside aside"
     "main main aside aside"
     "main main aside aside"
-    "footer footer footer footer";
-
-      
+    "footer footer footer footer"    
   
+}
+
+body{
+    height: 100%;
 }
 /*Header*/
 header{
@@ -46,7 +48,6 @@ header{
 
  
 /*main*/
-
  main{
  grid-area: main;
  background-color: rgb(214, 206, 206);
@@ -105,6 +106,7 @@ main section img:hover{
 
 aside{
     grid-area: aside;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(to top, rgb(37, 37, 112), rgb(115, 33, 33));
     padding-top: 10px;
@@ -201,9 +203,57 @@ form input{
 
 
 /*horarios*/
-.horarios{
-    display: flex;
-    justify-content: center;
+
+.bordeau-page main {
+    background-color: rgb(135, 10, 41);
+    color: rgb(255, 255, 255);
+}
+
+.bordeau-page img.img-fluid {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.bordeau-page h1 {
+    letter-spacing: 2px;
+}
+
+
+.grilla .celula {
+    border: 2px solid rgb(27, 8, 77);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s, overflow 0.5s;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255); 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0); 
+}
+
+.grilla .celula.sin-actividad {
+    background-color: rgb(123, 121, 121); 
+}
+
+.grilla .celula:hover {
+    transform: scale(1.1);
+
+}
+/* horarios menu desplegable*/
+
+.list-group-item {
+    background-color: rgb(202, 191, 191);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0); 
+}
+
+.list-group-item:active{
+    background-color: rgb(95, 17, 37);
+    color: aliceblue;
+}
+
+.list-group-item{
+margin-bottom: 5px
 }
 /*profesores*/
 .provisorio{
@@ -241,15 +291,14 @@ img.d-block {
 
     body{
         display: grid;
-        grid-template-columns: 1fr 3fr 50px auto;
-        grid-template-rows: 15% 50% 35%;
+        grid-template-columns: auto 50px auto;
+        grid-template-rows: 18% 62% 20%;
         grid-template-areas: 
-        "header header header header"
-        "main main aside aside"
-        "footer footer footer footer";
+        "header header header "
+        "main main aside"
+        "footer footer footer";
     
-          
-      
+            
     }
 
     main section h1{
@@ -260,15 +309,29 @@ img.d-block {
     
     main section h2{
         font-size: small;
-       }
+    }
+
+    /*img encabezado horarios*/
+    .col-auto img{
+        display: none;
+    }
+   
+/*aside horarios*/
+
+    aside p{
+        font-size: smaller;
+    }
 
 
+    footer{
+    display:flex;
+    align-items: flex-starcenter;
+    }
         
-       footer p {
+    footer p {
         font-size: 20px; 
 
-      }
-    
+      }   
 
 }
 
@@ -308,7 +371,4 @@ img.d-block {
         display: none;
 
     }
-/* Vista desktop*/
-@media (min-width: 768px){
 
-}
