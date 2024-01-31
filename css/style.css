@@ -5,31 +5,29 @@
     margin: 0;
     box-sizing: border-box;
 }
-header,main,aside{
-    border: 1px solid rgb(150, 29, 29)
-}
+
 body{
     display: grid;
-    grid-template-columns: 1fr 3fr 100px auto;
     grid-template-areas: 
     "header header header header"
-    "main main aside aside"
-    "main main aside aside"
-    "main main aside aside"
-    "footer footer footer footer"    
-  
+    "main main main aside"
+    "main main main aside"
+    "main main main aside"
+    "footer footer footer footer";
+     
 }
 
 body{
     height: 100%;
+    width: 100%;
 }
 /*Header*/
 header{
     grid-area: header;
     position: relative;
-    height: auto;
 
 }
+
 
 .navbar {
     z-index: 2;
@@ -50,19 +48,21 @@ header{
 /*main*/
  main{
  grid-area: main;
- background-color: rgb(214, 206, 206);
- }
+ background-image: linear-gradient(to bottom, rgb(244, 242, 239),rgb(116, 112, 112));
+ min-height: 100vh;
+}
+ 
 
 
-main section{
+main .index{
     position: relative;
     overflow: hidden;
 
 }
 
-main section h1{
+main .index h1{
     font-family: 'Roboto', sans-serif;
-    color:rgb(15, 54, 55);
+    color:rgb(52, 52, 60);
     font-size: larger;
     font-weight: 700;
     padding-top: 10px;
@@ -71,10 +71,9 @@ main section h1{
     transition: .5s;
 }
 
-main section h2{
-
+main .index h2{
     font-family: 'Roboto', sans-serif;
-    color:rgb(15, 54, 55);
+    color:rgb(52, 52, 60);
     font-size: large;
     font-weight: 700;
     margin-bottom: 30px;
@@ -83,22 +82,22 @@ main section h2{
     transition: .5s;
 }
 
-main section img{
+main .index img{
     transition: .5s;
 }
 
-h1:hover{
+main .index h1:hover{
     transform: scale(1.1);
     box-shadow: 5px 5px 10px rgb(115, 33, 33) ;
 
 }
 
- h2:hover{
+ main .index h2:hover{
     transform: scale(1.1);
     box-shadow: 0 0 10px rgb(115, 33, 33);
 
 }
-main section img:hover{
+main .index img:hover{
     transform: scale(1.1);
     box-shadow: 5px 5px 10px  rgb(115, 33, 33);
 }
@@ -108,7 +107,7 @@ aside{
     grid-area: aside;
     height: 100%;
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to top, rgb(37, 37, 112), rgb(115, 33, 33));
+     background-image: linear-gradient(to top, rgb(244, 242, 239),rgb(116, 112, 112));
     padding-top: 10px;
     display: flex;
     justify-content: center;
@@ -116,6 +115,8 @@ aside{
 }
 aside section p{
    color: antiquewhite;
+   display: flex;
+   justify-content: center;
    transition: .5s;
 }
 
@@ -127,8 +128,6 @@ aside section p:hover{
 footer{
     display: flex;
     grid-area: footer;
-    height: 60px;
-    align-items: center;
     justify-content: center;
     background-color: rgb(135, 129, 129);
     
@@ -139,6 +138,7 @@ footer p{
     font-size:larger;
     font-weight: 700;
 }
+
 
 /*contacto*/
 
@@ -177,8 +177,8 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.1); 
-    border-top: 1px solid rgb(222, 226, 230);
+    box-shadow: 0px 4px 2px -2px rgb(94, 86, 86); 
+    border-top: 1px solid #DCDBDB;
 }
 
 .campos{
@@ -199,24 +199,31 @@ form input{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 
 /*horarios*/
 
+
 .bordeau-page main {
-    background-color: rgb(135, 10, 41);
-    color: rgb(255, 255, 255);
+    background-color: #702326;
+    color: rgb(255, 255, 255)
+   
 }
 
 .bordeau-page img.img-fluid {
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #423737;
 }
 
 .bordeau-page h1 {
+    color:#8b8787;
     letter-spacing: 2px;
+    padding-top: 10px;
+    font-size: x-large;
+    font-weight: 900;
+   
 }
-
 
 .grilla .celula {
     border: 2px solid rgb(27, 8, 77);
@@ -230,14 +237,39 @@ form input{
     color: rgb(0, 0, 0); 
 }
 
-.grilla .celula.sin-actividad {
-    background-color: rgb(123, 121, 121); 
-}
-
 .grilla .celula:hover {
     transform: scale(1.1);
-
 }
+
+.grilla .celula.sin-actividad {
+    background-color: rgb(123, 121, 121); 
+
+ }
+/* no queria que se aplique a las celdas sin actividad pero no funciono,
+ .grilla .celula:not(.sin-actividad):hover {
+    transform: scale(1.1);
+}
+ */
+/* Intentando que no haga scroll horizontal (no funciono) */
+.grilla .celula{
+    --bs-gutter-x: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+.grilla .row {
+  --bs-gutter-x: 0;
+    margin-right: 0; 
+    margin-left: 0;
+}
+
+.grilla .col-12 {
+     
+   --bs-gutter-x: 0;
+    margin-right: 0;
+    margin-left: 0;
+    
+}
+
 /* horarios menu desplegable*/
 
 .list-group-item {
@@ -269,46 +301,109 @@ margin-bottom: 5px
 }
 
 /* Galeria*/
-img.d-block {
-    width: 100%;
-    height: auto;
-  }
+                   
+main section.galeria{
+      display: grid; 
+      grid-template-columns:300px 300px;
+      grid-template-rows: 350px 350px 350px 350px;
+      justify-content: center;
+      padding-top: 20px;
+      row-gap: 20px;
+      column-gap: 20px;
+      overflow: hidden;
+    
+}
  
-.carousel-container { 
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-height: 490px; 
+
+main section.galeria div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a69c9c;
+    border: 2px solid rgb(104, 32, 33);
+    box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
 }
 
-#carouselExample {
-    position: relative;
-    z-index: 1; 
+main section.galeria div img{
+  height: 320px;
+  transition: 0.5s;
+}
+
+main section.galeria img:hover{
+    transform: scale(1.1);       
+}  
+
+/*Vista Tablet*/
+
+@media (max-width: 767px) {
+
+
+    .hover-effect{
+        min-height: 500px;
+    } 
+   
+   main section.index h1{
+    font-size: medium;
+   }
+
+   main section.index h2{
+    font-size: medium;
+   }
+
+
+   aside p{
+    padding-top: 10px;
+    font-size: small;
+   }
+   
+    footer { 
+      padding: 10px; 
+      text-align: center; 
+    }
+  
+    footer p {
+      font-size: 14px; 
+    }      
+/* galeria*/
+
+main section.galeria{
+    display: grid; 
+    grid-template-columns:200px 200px;
+    grid-template-rows: repeat(4,250px);
+    padding-top: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+main section.galeria div img{
+    height: 240px;
   }
+
+
+
  /* Vista Mobile*/
 
-@media (max-width:480px){
+ @media (max-width:480px){
 
     body{
         display: grid;
         grid-template-columns: auto 50px auto;
-        grid-template-rows: 18% 62% 20%;
+        grid-template-rows: 121px auto 121px;
         grid-template-areas: 
         "header header header "
         "main main aside"
         "footer footer footer";
-    
-            
-    }
+     
+   }
 
-    main section h1{
+    main section.index h1{
         padding-top: 20px;
-        font-size: small;
+        font-size: smaller;
     }
    
     
-    main section h2{
-        font-size: small;
+    main section.index h2{
+        font-size: smaller;
     }
 
     /*img encabezado horarios*/
@@ -325,50 +420,32 @@ img.d-block {
 
     footer{
     display:flex;
-    align-items: flex-starcenter;
+    align-items: start;
     }
         
     footer p {
-        font-size: 20px; 
+        font-size: small; 
 
-      }   
+      }  
+      
+    footer iframe {
+        width: 100%; 
+        height: 100px; 
+    }
 
-}
-
-/*Vista Tablet*/
-
-@media (max-width: 767px) {
-
-    .hover-effect{
-        min-height: 500px;
+    /*Galeria*/
+    
+    main section.galeria{
+        display: grid; 
+         grid-template-columns:200px;
+         grid-template-rows: repeat(6,250px); 
+         padding-top: 10px;
+         padding-bottom: 10px;
+         row-gap: 10px;
+         column-gap: 10px;
     } 
-   
-   main section h1{
-    font-size: medium;
-   }
 
-   main section h2{
-    font-size: medium;
-   }
-
-
-   aside p{
-    font-size: small;
-   }
-   
-    footer {
-      height: auto; 
-      padding: 10px; 
-      text-align: center; 
-    }
-  
-    footer p {
-      font-size: 14px; 
-    }
-  
-    /*contacto imagen*/
-    .col-lg-6 img {
-        display: none;
-
-    }
-
+    main section.galeria div img{
+        height: 230px;
+      }   
+}
