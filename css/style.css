@@ -48,7 +48,7 @@ header{
 /*main*/
  main{
  grid-area: main;
- background-image: linear-gradient(to bottom, rgb(244, 242, 239),rgb(116, 112, 112));
+ background-image: linear-gradient(to bottom, rgb(244, 242, 239),rgb(205, 196, 196));
  min-height: 100vh;
 }
  
@@ -107,7 +107,7 @@ aside{
     grid-area: aside;
     height: 100%;
     font-family: 'Roboto', sans-serif;
-     background-image: linear-gradient(to top, rgb(244, 242, 239),rgb(116, 112, 112));
+     background-image: linear-gradient(to top, rgb(244, 242, 239),rgb(205, 196, 196));
     padding-top: 10px;
     display: flex;
     justify-content: center;
@@ -144,7 +144,8 @@ footer p{
 
 .fontStyle{
     font-family: 'Roboto', sans-serif;
-    font-weight:700;
+    color: #646161;
+    font-weight:500;
     font-size: xx-large;
     margin-top: 10px;
     display: flex;
@@ -172,13 +173,14 @@ paddingT{
 
 form{
     font-family: 'Roboto', sans-serif;
-    font-weight:700;
+    color: #646161;
+    font-weight:400;
     font-size: large;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 2px -2px rgb(94, 86, 86); 
-    border-top: 1px solid #DCDBDB;
+    box-shadow: 0px 4px 2px -2px rgb(171, 168, 168); 
+    border: 1px solid #a9a7a7;
 }
 
 .campos{
@@ -287,18 +289,6 @@ form input{
 .list-group-item{
 margin-bottom: 5px
 }
-/*profesores*/
-.provisorio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
-.parrafoProvisorio{
-    background-color: rgb(64, 64, 181);
-    font-family: 'Roboto', sans-serif;
-    font-weight:700;
-}
 
 /* Galeria*/
                    
@@ -333,6 +323,46 @@ main section.galeria img:hover{
     transform: scale(1.1);       
 }  
 
+/*Profesores*/
+
+main section.profesores{
+    display: grid; 
+    grid-template-columns:300px 300px;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    padding-top: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+  
+}
+
+main section.profesores div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    background-color: #ded5d5;
+    border: 2px solid rgb(104, 32, 33);
+    box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
+    padding-bottom: 10px;
+    
+}
+
+main section.profesores div p{
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main section.profesores div img{
+    justify-content: center;
+    align-items: flex-end;
+    height: 300px;
+    border: 2px solid rgb(104, 32, 33);
+    box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
+
+}
 /*Vista Tablet*/
 
 @media (max-width: 767px) {
@@ -369,7 +399,7 @@ main section.galeria img:hover{
 main section.galeria{
     display: grid; 
     grid-template-columns:200px 200px;
-    grid-template-rows: repeat(4,250px);
+    grid-template-rows: repeat(2,250px);
     padding-top: 20px;
     row-gap: 20px;
     column-gap: 20px;
@@ -379,6 +409,20 @@ main section.galeria div img{
     height: 240px;
   }
 
+
+ main section.profesores{
+        display: grid; 
+         grid-template-columns:200px;
+         grid-template-rows:auto auto;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         row-gap: 10px;
+         column-gap: 10px;
+    } 
+
+    main section.galeria div img{
+        height: 220px;
+      }   
 
 
  /* Vista Mobile*/
