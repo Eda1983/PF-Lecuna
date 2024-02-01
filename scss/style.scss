@@ -1,0 +1,438 @@
+/*Reseteo CSS*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "main main main aside"
+    "main main main aside"
+    "main main main aside"
+    "footer footer footer footer";
+    height: 100%;
+    width: 100%;
+} 
+
+/*Header*/
+header{
+    grid-area: header;
+    position: relative;
+
+}
+
+
+.navbar {
+    z-index: 2;
+    position: relative;
+    .navbar-brand img {
+        max-width: 100%;
+        height: auto;
+     } 
+     .navbar-toggler {
+        border: none;
+    } 
+  }
+
+/*main*/
+ main{
+ grid-area: main;
+ background-image: linear-gradient(to bottom, rgb(244, 242, 239),rgb(205, 196, 196));
+ min-height: 100vh;
+ .index{
+    position: relative;
+    overflow: hidden;
+    h1{
+        font-family: 'Roboto', sans-serif;
+        color:rgb(52, 52, 60);
+        font-size: larger;
+        font-weight: 700;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        transition: .5s;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 5px 5px 10px rgb(115, 33, 33) ;
+        }
+    }
+    h2{
+        font-family: 'Roboto', sans-serif;
+        color:rgb(52, 52, 60);
+        font-size: large;
+        font-weight: 700;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        transition: .5s;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgb(115, 33, 33);
+        }
+    }
+
+    img{
+    transition: .5s;
+    &:hover{
+        transform: scale(1.1);
+        box-shadow: 5px 5px 10px  rgb(115, 33, 33);
+    }
+    }
+   }
+}
+ 
+/*aside*/
+aside{
+    grid-area: aside;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+     background-image: linear-gradient(to top, rgb(244, 242, 239),rgb(205, 196, 196));
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    section p{
+        color: rgb(144, 141, 137);
+        display: flex;
+        justify-content: center;
+        transition: .5s;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 10px antiquewhite;
+        }
+     }
+}
+
+
+
+footer{
+    display: flex;
+    grid-area: footer;
+    justify-content: center;
+    background-color: rgb(135, 129, 129);
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-size:larger;
+        font-weight: 700;
+    }
+    
+    
+} 
+
+
+/*contacto*/
+
+.fontStyle{
+    font-family: 'Roboto', sans-serif;
+    color: #646161;
+    font-weight:500;
+    font-size: xx-large;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.paddingTB{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.col-lg-12,
+.col-lg-6 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+paddingT{
+    padding-top: 50px;
+}
+.centrar{
+    text-align: center;
+}
+
+form{
+    font-family: 'Roboto', sans-serif;
+    color: #646161;
+    font-weight:400;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 2px -2px rgb(171, 168, 168); 
+    border: 1px solid #a9a7a7;
+    input{
+        border-radius: 5px;
+    
+    } 
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.button{
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
+/*horarios*/
+
+
+.bordeau-page{ main {
+    background-color: #702326;
+    color: rgb(255, 255, 255)
+   
+}
+img.img-fluid {
+    border: 2px solid #423737;
+}
+h1 {
+    color:#8b8787;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    font-size: x-large;
+    font-weight: 900;  
+}
+}
+
+.grilla {.celula {
+    border: 2px solid rgb(27, 8, 77);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s, overflow 0.5s;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255); 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0); 
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+}
+.grilla .celula.sin-actividad {
+    background-color: rgb(123, 121, 121); 
+ }
+
+.grilla .row {
+  --bs-gutter-x: 0;
+    margin-right: 0; 
+    margin-left: 0;
+}
+
+
+/* horarios menu desplegable*/
+
+.list-group-item {
+    background-color: rgb(202, 191, 191);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0); 
+    margin-bottom: 5px;
+    &:active{
+        background-color: rgb(95, 17, 37);
+        color: aliceblue;
+    }
+}
+
+/* Galeria*/
+                   
+main section.galeria{
+      display: grid; 
+      grid-template-columns:300px 300px;
+      grid-template-rows: 350px 350px 350px 350px;
+      justify-content: center;
+      padding-top: 20px;
+      row-gap: 20px;
+      column-gap: 20px;
+      overflow: hidden;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #a69c9c;
+        border: 2px solid rgb(104, 32, 33);
+        box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
+        img{
+            height: 320px;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.1);       
+            } 
+          }
+    }
+    
+}
+ 
+
+/*Profesores*/
+
+main section.profesores{
+    display: grid; 
+    grid-template-columns:300px 300px;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    padding-top: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin-bottom: 10px;
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ded5d5;
+        border: 2px solid rgb(104, 32, 33);
+        box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
+        padding-bottom: 10px;
+        p{
+            justify-content: center;
+            align-items: flex-start;
+        } 
+        img{
+            justify-content: center;
+            align-items: flex-end;
+            height: 300px;
+            border: 2px solid rgb(104, 32, 33);
+            box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
+        
+        }  
+    }
+  
+}
+
+/*Vista Tablet*/
+
+@media (max-width: 767px) {
+
+
+    .hover-effect{
+        min-height: 500px;
+    } 
+   
+   main section.index{h1{
+    font-size: medium;
+   }
+   h2{
+    font-size: medium;
+   }
+  }
+
+
+   aside p{
+    padding-top: 10px;
+    font-size: small;
+   }
+   
+    footer { 
+      padding: 10px; 
+      text-align: center; 
+      p {
+        font-size: 14px; 
+      }
+    }
+  
+          
+/* galeria*/
+
+main section.galeria{
+    display: grid; 
+    grid-template-columns:200px 200px;
+    grid-template-rows: repeat(2,250px);
+    padding-top: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+    div img{
+        height: 240px;
+      }
+}
+
+/*profesores*/
+ main section.profesores{
+        display: grid; 
+         grid-template-columns:200px;
+         grid-template-rows:auto auto;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         row-gap: 10px;
+         column-gap: 10px;
+         div img{
+            height: 220px;
+          }       
+    } 
+  }
+
+ /* Vista Movil*/
+
+ @media (max-width:480px){
+
+    body{
+        display: grid;
+        grid-template-columns: auto 50px auto;
+        grid-template-rows: 121px auto 121px;
+        grid-template-areas: 
+        "header header header "
+        "main main aside"
+        "footer footer footer";
+     
+   }
+
+    main section.index{h1{
+        padding-top: 20px;
+        font-size: smaller;
+    }
+    h2{
+        font-size: smaller;
+    } 
+} 
+
+    /*img encabezado horarios*/
+    .col-auto img{
+        display: none;
+    }
+   
+    /*aside horarios*/
+
+    aside p{
+        font-size: smaller;
+    }
+
+
+    footer{
+    display:flex;
+    align-items: start;
+    p {
+        font-size: small; 
+      }  
+      
+    }
+        
+    /*Galeria*/
+    
+    main section.galeria{
+        display: grid; 
+         grid-template-columns:200px;
+         grid-template-rows: repeat(6,250px); 
+         padding-top: 10px;
+         padding-bottom: 10px;
+         row-gap: 10px;
+         column-gap: 10px;
+    } 
+        div img{
+        height: 230px;
+      }   
+    }             
