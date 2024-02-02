@@ -3,7 +3,7 @@ paddingT{
     padding-top: 50px;
     .fontStyle{
         font-family: 'Roboto', sans-serif;
-        color: #646161;
+        color:$colorfuente;
         font-weight:500;
         font-size: xx-large;
         margin-top: 10px;
@@ -20,7 +20,7 @@ paddingT{
     padding-bottom: 20px;
     form{
         font-family: 'Roboto', sans-serif;
-        color: #646161;
+        color:$colorfuente;
         font-weight:400;
         font-size: large;
         display: flex;

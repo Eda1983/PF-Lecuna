@@ -91,7 +91,7 @@ aside {
   overflow: hidden;
 }
 aside section p {
-  color: rgb(144, 141, 137);
+  color: rgb(52, 52, 60);
   display: flex;
   justify-content: center;
   transition: 0.5s;
@@ -134,7 +134,7 @@ aside section p:hover {
   border: 2px solid #423737;
 }
 .bordeau-page h1 {
-  color: #8b8787;
+  color: rgb(52, 52, 60);
   letter-spacing: 2px;
   padding-top: 10px;
   font-size: x-large;
@@ -150,7 +150,7 @@ aside section p:hover {
   background-color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  color: rgb(52, 52, 60);
 }
 .grilla .celula:hover {
   transform: scale(1.1);
@@ -171,11 +171,11 @@ aside section p:hover {
   background-color: rgb(202, 191, 191);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  color: rgb(52, 52, 60);
   margin-bottom: 5px;
 }
 .list-group-item:active {
-  background-color: rgb(95, 17, 37);
+  background-color: #702326;
   color: aliceblue;
 }
 
@@ -204,7 +204,7 @@ main section.galeria div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #a69c9c;
+  background-color: rgb(166, 156, 156);
   border: 2px solid rgb(104, 32, 33);
   box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
 }
@@ -259,7 +259,7 @@ main section.profesores div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ded5d5;
+  background-color: rgb(166, 156, 156);
   border: 2px solid rgb(104, 32, 33);
   box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
   padding-bottom: 10px;
@@ -267,13 +267,12 @@ main section.profesores div {
 main section.profesores div p {
   justify-content: center;
   align-items: flex-start;
+  font-family: "Roboto", sans-serif;
 }
 main section.profesores div img {
   justify-content: center;
   align-items: flex-end;
   height: 300px;
-  border: 2px solid rgb(104, 32, 33);
-  box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
 }
 
 @media (max-width: 767px) {
@@ -295,7 +294,7 @@ paddingT {
 }
 paddingT .fontStyle {
   font-family: "Roboto", sans-serif;
-  color: #646161;
+  color: rgb(52, 52, 60);
   font-weight: 500;
   font-size: xx-large;
   margin-top: 10px;
@@ -313,7 +312,7 @@ paddingT .fontStyle {
 }
 .paddingTB form {
   font-family: "Roboto", sans-serif;
-  color: #646161;
+  color: rgb(52, 52, 60);
   font-weight: 400;
   font-size: large;
   display: flex;
