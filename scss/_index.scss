@@ -1,0 +1,98 @@
+
+main{
+    grid-area: main;
+    background-image: linear-gradient(to bottom, rgb(244, 242, 239),rgb(205, 196, 196));
+    min-height: 100vh;
+    .index{
+       position: relative;
+       overflow: hidden;
+       h1{
+           font-family: 'Roboto', sans-serif;
+           color:rgb(52, 52, 60);
+           font-size: larger;
+           font-weight: 700;
+           padding-top: 10px;
+           display: flex;
+           justify-content: center;
+           transition: .5s;
+           &:hover{
+               transform: scale(1.1);
+               box-shadow: 5px 5px 10px rgb(115, 33, 33) ;
+           }
+       }
+       h2{
+           font-family: 'Roboto', sans-serif;
+           color:rgb(52, 52, 60);
+           font-size: large;
+           font-weight: 700;
+           margin-bottom: 30px;
+           display: flex;
+           justify-content: center;
+           transition: .5s;
+           &:hover{
+               transform: scale(1.1);
+               box-shadow: 0 0 10px rgb(115, 33, 33);
+           }
+       }
+   
+       img{
+       transition: .5s;
+       &:hover{
+           transform: scale(1.1);
+           box-shadow: 5px 5px 10px  rgb(115, 33, 33);
+       }
+       }
+      }
+   }
+   aside{
+    grid-area: aside;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+     background-image: linear-gradient(to top, rgb(244, 242, 239),rgb(205, 196, 196));
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    section p{
+        color: rgb(144, 141, 137);
+        display: flex;
+        justify-content: center;
+        transition: .5s;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 10px antiquewhite;
+        }
+     }
+}
+@media (max-width: 767px){
+    .hover-effect{
+        min-height: 500px;
+    } 
+   
+   main section.index{h1{
+    font-size: medium;
+   }
+   h2{
+    font-size: medium;
+   }
+  }
+
+
+   aside p{
+    padding-top: 10px;
+    font-size: small;
+   }
+
+}
+@media (max-width:480px){
+
+    main section.index{h1{
+        padding-top: 20px;
+        font-size: smaller;
+    }
+    h2{
+        font-size: smaller;
+    } 
+} 
+
+}

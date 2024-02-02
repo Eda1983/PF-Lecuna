@@ -1,0 +1,16 @@
+header{
+    grid-area: header;
+    position: relative;
+    .navbar {
+        z-index: 2;
+        position: relative;
+        .navbar-brand img {
+            max-width: 100%;
+            height: auto;
+         } 
+         .navbar-toggler {
+            border: none;
+        } 
+      }
+
+}

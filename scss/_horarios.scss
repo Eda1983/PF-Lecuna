@@ -1,0 +1,72 @@
+/*horarios*/
+
+
+.bordeau-page{ main {
+    background-color: #702326;
+    color: rgb(255, 255, 255)
+   
+}
+img.img-fluid {
+    border: 2px solid #423737;
+}
+h1 {
+    color:#8b8787;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    font-size: x-large;
+    font-weight: 900;  
+}
+}
+
+.grilla {.celula {
+    border: 2px solid rgb(27, 8, 77);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s, overflow 0.5s;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255); 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0); 
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+}
+.grilla .celula.sin-actividad {
+    background-color: rgb(123, 121, 121); 
+ }
+
+.grilla .row {
+  --bs-gutter-x: 0;
+    margin-right: 0; 
+    margin-left: 0;
+}
+
+
+/* horarios menu desplegable*/
+
+.list-group-item {
+    background-color: rgb(202, 191, 191);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0); 
+    margin-bottom: 5px;
+    &:active{
+        background-color: rgb(95, 17, 37);
+        color: aliceblue;
+    }
+}
+@media (max-width:480px){
+
+     /*img encabezado horarios*/
+     .col-auto img{
+        display: none;
+    }
+   
+    /*aside horarios*/
+
+    aside p{
+        font-size: smaller;
+    }
+}

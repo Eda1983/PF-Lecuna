@@ -1,4 +1,3 @@
-/*Reseteo CSS*/
 * {
   padding: 0;
   margin: 0;
@@ -12,25 +11,30 @@ body {
   width: 100%;
 }
 
-/*Header*/
+@media (max-width: 480px) {
+  body {
+    display: grid;
+    grid-template-columns: auto 50px auto;
+    grid-template-rows: 121px auto 121px;
+    grid-template-areas: "header header header " "main main aside" "footer footer footer";
+  }
+}
 header {
   grid-area: header;
   position: relative;
 }
-
-.navbar {
+header .navbar {
   z-index: 2;
   position: relative;
 }
-.navbar .navbar-brand img {
+header .navbar .navbar-brand img {
   max-width: 100%;
   height: auto;
 }
-.navbar .navbar-toggler {
+header .navbar .navbar-toggler {
   border: none;
 }
 
-/*main*/
 main {
   grid-area: main;
   background-image: linear-gradient(to bottom, rgb(244, 242, 239), rgb(205, 196, 196));
@@ -76,7 +80,6 @@ main .index img:hover {
   box-shadow: 5px 5px 10px rgb(115, 33, 33);
 }
 
-/*aside*/
 aside {
   grid-area: aside;
   height: 100%;
@@ -98,80 +101,30 @@ aside section p:hover {
   box-shadow: 0 0 10px antiquewhite;
 }
 
-footer {
-  display: flex;
-  grid-area: footer;
-  justify-content: center;
-  background-color: rgb(135, 129, 129);
+@media (max-width: 767px) {
+  .hover-effect {
+    min-height: 500px;
+  }
+  main section.index h1 {
+    font-size: medium;
+  }
+  main section.index h2 {
+    font-size: medium;
+  }
+  aside p {
+    padding-top: 10px;
+    font-size: small;
+  }
 }
-footer p {
-  font-family: "Roboto", sans-serif;
-  font-size: larger;
-  font-weight: 700;
+@media (max-width: 480px) {
+  main section.index h1 {
+    padding-top: 20px;
+    font-size: smaller;
+  }
+  main section.index h2 {
+    font-size: smaller;
+  }
 }
-
-/*contacto*/
-.fontStyle {
-  font-family: "Roboto", sans-serif;
-  color: #646161;
-  font-weight: 500;
-  font-size: xx-large;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.paddingTB {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.col-lg-12,
-.col-lg-6 {
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-paddingT {
-  padding-top: 50px;
-}
-
-.centrar {
-  text-align: center;
-}
-
-form {
-  font-family: "Roboto", sans-serif;
-  color: #646161;
-  font-weight: 400;
-  font-size: large;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0px 4px 2px -2px rgb(171, 168, 168);
-  border: 1px solid #a9a7a7;
-}
-form input {
-  border-radius: 5px;
-}
-
-.campos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.button {
-  color: white;
-  border-radius: 5px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
 /*horarios*/
 .bordeau-page main {
   background-color: #702326;
@@ -226,6 +179,16 @@ form input {
   color: aliceblue;
 }
 
+@media (max-width: 480px) {
+  /*img encabezado horarios*/
+  .col-auto img {
+    display: none;
+  }
+  /*aside horarios*/
+  aside p {
+    font-size: smaller;
+  }
+}
 /* Galeria*/
 main section.galeria {
   display: grid;
@@ -253,6 +216,33 @@ main section.galeria div img:hover {
   transform: scale(1.1);
 }
 
+@media (max-width: 767px) {
+  main section.galeria {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: repeat(2, 250px);
+    padding-top: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+  main section.galeria div img {
+    height: 240px;
+  }
+}
+@media (max-width: 480px) {
+  main section.galeria {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(6, 250px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  div img {
+    height: 230px;
+  }
+}
 /*Profesores*/
 main section.profesores {
   display: grid;
@@ -286,41 +276,7 @@ main section.profesores div img {
   box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
 }
 
-/*Vista Tablet*/
 @media (max-width: 767px) {
-  .hover-effect {
-    min-height: 500px;
-  }
-  main section.index h1 {
-    font-size: medium;
-  }
-  main section.index h2 {
-    font-size: medium;
-  }
-  aside p {
-    padding-top: 10px;
-    font-size: small;
-  }
-  footer {
-    padding: 10px;
-    text-align: center;
-  }
-  footer p {
-    font-size: 14px;
-  }
-  /* galeria*/
-  main section.galeria {
-    display: grid;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: repeat(2, 250px);
-    padding-top: 20px;
-    row-gap: 20px;
-    column-gap: 20px;
-  }
-  main section.galeria div img {
-    height: 240px;
-  }
-  /*profesores*/
   main section.profesores {
     display: grid;
     grid-template-columns: 200px;
@@ -334,48 +290,91 @@ main section.profesores div img {
     height: 220px;
   }
 }
-/* Vista Movil*/
-@media (max-width: 480px) {
-  body {
-    display: grid;
-    grid-template-columns: auto 50px auto;
-    grid-template-rows: 121px auto 121px;
-    grid-template-areas: "header header header " "main main aside" "footer footer footer";
-  }
-  main section.index h1 {
-    padding-top: 20px;
-    font-size: smaller;
-  }
-  main section.index h2 {
-    font-size: smaller;
-  }
-  /*img encabezado horarios*/
-  .col-auto img {
-    display: none;
-  }
-  /*aside horarios*/
-  aside p {
-    font-size: smaller;
-  }
+paddingT {
+  padding-top: 50px;
+}
+paddingT .fontStyle {
+  font-family: "Roboto", sans-serif;
+  color: #646161;
+  font-weight: 500;
+  font-size: xx-large;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.centrar {
+  text-align: center;
+}
+
+.paddingTB {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.paddingTB form {
+  font-family: "Roboto", sans-serif;
+  color: #646161;
+  font-weight: 400;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 2px -2px rgb(171, 168, 168);
+  border: 1px solid #a9a7a7;
+}
+.paddingTB form input {
+  border-radius: 5px;
+}
+.paddingTB form .campos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.paddingTB form .button {
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.col-lg-12,
+.col-lg-6 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  background-color: rgb(135, 129, 129);
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
   footer {
+    padding: 10px;
+    text-align: center;
+  }
+  footer p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  footer.horarios {
     display: flex;
     align-items: start;
   }
-  footer p {
+  footer.horarios p {
     font-size: small;
-  }
-  /*Galeria*/
-  main section.galeria {
-    display: grid;
-    grid-template-columns: 200px;
-    grid-template-rows: repeat(6, 250px);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    row-gap: 10px;
-    column-gap: 10px;
-  }
-  div img {
-    height: 230px;
   }
 }
 

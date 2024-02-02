@@ -1,0 +1,34 @@
+footer{
+    display: flex;
+    grid-area: footer;
+    justify-content: center;
+    background-color: rgb(135, 129, 129);
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-size:larger;
+        font-weight: 700;
+    }
+    
+    
+} 
+@media (max-width: 767px){
+    footer { 
+      padding: 10px; 
+      text-align: center; 
+      p {
+        font-size: 14px; 
+      }
+    }
+}
+@media (max-width:480px){
+    footer.horarios{
+        display:flex;
+        align-items: start;
+        p {
+            font-size: small; 
+          }  
+          
+        }
+            
+
+}
