@@ -19,6 +19,18 @@ body {
     grid-template-areas: "header header header " "main main aside" "footer footer footer";
   }
 }
+.flex-columnCenter, .paddingTB form .button, .paddingTB form .campos, .paddingTB form, main section.profesores div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-center, main section.galeria div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   grid-area: header;
   position: relative;
@@ -231,9 +243,6 @@ main section.galeria {
   overflow: hidden;
 }
 main section.galeria div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(166, 156, 156);
   border: 2px solid rgb(104, 32, 33);
   box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
@@ -285,10 +294,7 @@ main section.profesores {
   margin-bottom: 10px;
 }
 main section.profesores div {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   background-color: rgb(166, 156, 156);
   border: 2px solid rgb(104, 32, 33);
   box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
@@ -345,9 +351,6 @@ paddingT .fontStyle {
   color: rgb(52, 52, 60);
   font-weight: 400;
   font-size: large;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   box-shadow: 0px 4px 2px -2px rgb(171, 168, 168);
   border: 1px solid #a9a7a7;
 }
@@ -355,18 +358,12 @@ paddingT .fontStyle {
   border-radius: 5px;
 }
 .paddingTB form .campos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 10px;
 }
 .paddingTB form .button {
   color: rgb(240, 248, 255);
   border-radius: 5px;
   margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 5px;
 }
 

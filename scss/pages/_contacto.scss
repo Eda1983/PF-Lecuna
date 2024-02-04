@@ -23,9 +23,7 @@ paddingT{
         color:$colorfuente;
         font-weight:400;
         font-size: large;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @extend.flex-columnCenter;
         box-shadow: 0px 4px 2px -2px rgb(171, 168, 168); 
         border: 1px solid #a9a7a7;
         input{
@@ -33,18 +31,14 @@ paddingT{
         
         } 
         .campos{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+           @extend.flex-columnCenter;
             gap: 10px;
         }
         .button{
         color:$fondoblanco;
         border-radius: 5px;
         margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @extend.flex-columnCenter;
         margin-bottom: 5px;
      }  
     }

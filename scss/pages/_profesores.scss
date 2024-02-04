@@ -10,10 +10,8 @@ main section.profesores{
     column-gap: 20px;
     margin-bottom: 10px;
     div {
-        display: flex;
-        flex-direction: column;
+        @extend.flex-columnCenter;
         justify-content: center;
-        align-items: center;
         background-color:$fondogeneral;
         border:$bordesestilo;
         box-shadow:$sombraaborde;
