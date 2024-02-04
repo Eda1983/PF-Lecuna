@@ -35,6 +35,36 @@ header .navbar .navbar-toggler {
   border: none;
 }
 
+footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  background-color: rgb(135, 129, 129);
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  footer {
+    padding: 10px;
+    text-align: center;
+  }
+  footer p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  footer.horarios {
+    display: flex;
+    align-items: start;
+  }
+  footer.horarios p {
+    font-size: small;
+  }
+}
 main {
   grid-area: main;
   background-image: linear-gradient(to bottom, rgb(244, 242, 239), rgb(205, 196, 196));
@@ -127,11 +157,11 @@ aside section p:hover {
 }
 /*horarios*/
 .bordeau-page main {
-  background-color: #702326;
-  color: rgb(255, 255, 255);
+  background-color: rgb(112, 35, 38);
+  color: rgb(240, 248, 255);
 }
 .bordeau-page img.img-fluid {
-  border: 2px solid #423737;
+  border: 2px solid rgb(104, 32, 33);
 }
 .bordeau-page h1 {
   color: rgb(52, 52, 60);
@@ -142,12 +172,12 @@ aside section p:hover {
 }
 
 .grilla .celula {
-  border: 2px solid rgb(27, 8, 77);
+  border: 2px solid rgb(104, 32, 33);
   padding: 10px;
   text-align: center;
   transition: transform 0.5s, overflow 0.5s;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(240, 248, 255);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: rgb(52, 52, 60);
@@ -175,8 +205,8 @@ aside section p:hover {
   margin-bottom: 5px;
 }
 .list-group-item:active {
-  background-color: #702326;
-  color: aliceblue;
+  background-color: rgb(112, 35, 38);
+  color: rgb(240, 248, 255);
 }
 
 @media (max-width: 480px) {
@@ -331,7 +361,7 @@ paddingT .fontStyle {
   gap: 10px;
 }
 .paddingTB form .button {
-  color: white;
+  color: rgb(240, 248, 255);
   border-radius: 5px;
   margin-top: 10px;
   display: flex;
@@ -344,37 +374,6 @@ paddingT .fontStyle {
 .col-lg-6 {
   padding-right: 0px;
   padding-left: 0px;
-}
-
-footer {
-  display: flex;
-  grid-area: footer;
-  justify-content: center;
-  background-color: rgb(135, 129, 129);
-}
-footer p {
-  font-family: "Roboto", sans-serif;
-  font-size: larger;
-  font-weight: 700;
-}
-
-@media (max-width: 767px) {
-  footer {
-    padding: 10px;
-    text-align: center;
-  }
-  footer p {
-    font-size: 14px;
-  }
-}
-@media (max-width: 480px) {
-  footer.horarios {
-    display: flex;
-    align-items: start;
-  }
-  footer.horarios p {
-    font-size: small;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

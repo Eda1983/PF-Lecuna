@@ -16,8 +16,8 @@ main section.galeria{
       justify-content: center;
       align-items: center;
       background-color:$fondogeneral;
-      border: 2px solid rgb(104, 32, 33);
-      box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
+      border: $bordesestilo;
+      box-shadow:$sombraaborde;
       img{
           height: 320px;
           transition: 0.5s;

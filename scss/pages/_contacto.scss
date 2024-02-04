@@ -2,7 +2,7 @@
 paddingT{
     padding-top: 50px;
     .fontStyle{
-        font-family: 'Roboto', sans-serif;
+        font-family:$letrafamilia ;
         color:$colorfuente;
         font-weight:500;
         font-size: xx-large;
@@ -19,7 +19,7 @@ paddingT{
     padding-top: 20px;
     padding-bottom: 20px;
     form{
-        font-family: 'Roboto', sans-serif;
+        font-family: $letrafamilia;
         color:$colorfuente;
         font-weight:400;
         font-size: large;
@@ -39,7 +39,7 @@ paddingT{
             gap: 10px;
         }
         .button{
-        color: white;
+        color:$fondoblanco;
         border-radius: 5px;
         margin-top: 10px;
         display: flex;

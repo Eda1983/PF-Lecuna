@@ -2,12 +2,12 @@
 
 
 .bordeau-page{ main {
-    background-color: #702326;
+    background-color:$fondo-bordeau;
     color:$fondoblanco;
    
 }
 img.img-fluid {
-    border: 2px solid #423737;
+    border:$bordesestilo;
 }
 h1 {
     color:$colorfuente;
@@ -19,13 +19,13 @@ h1 {
 }
 
 .grilla {.celula {
-    border: 2px solid rgb(27, 8, 77);
+    border:$bordesestilo;
     padding: 10px;
     text-align: center;
     transition: transform 0.5s, overflow 0.5s;
     overflow: hidden;
     background-color:$fondoblanco ; 
-    font-family: 'Roboto', sans-serif;
+    font-family:$letrafamilia;
     font-weight: 500;
     color:$colorfuente; 
     &:hover {
@@ -48,13 +48,13 @@ h1 {
 
 .list-group-item {
     background-color: rgb(202, 191, 191);
-    font-family: 'Roboto', sans-serif;
+    font-family:$letrafamilia;
     font-weight: 500;
     color:$colorfuente; 
     margin-bottom: 5px;
     &:active{
-        background-color:#702326;
-        color: aliceblue;
+        background-color:$fondo-bordeau;
+        color:$fondoblanco;
     }
 }
 @media (max-width:480px){
