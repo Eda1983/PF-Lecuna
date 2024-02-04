@@ -12,8 +12,7 @@ main{
            font-size: larger;
            font-weight: 700;
            padding-top: 10px;
-           display: flex;
-           justify-content: center;
+           @extend.flex-justcenter;
            transition: .5s;
            &:hover{
                transform: scale(1.1);
@@ -26,8 +25,7 @@ main{
            font-size: large;
            font-weight: 700;
            margin-bottom: 30px;
-           display: flex;
-           justify-content: center;
+           @extend.flex-justcenter;
            transition: .5s;
            &:hover{
                transform: scale(1.1);
@@ -50,13 +48,11 @@ main{
     font-family:$letrafamilia;
      background-image: linear-gradient(to top, rgb(244, 242, 239),rgb(205, 196, 196));
     padding-top: 10px;
-    display: flex;
-    justify-content: center;
+    @extend.flex-justcenter;
     overflow: hidden;
     section p{
         color:$colorfuente;
-        display: flex;
-        justify-content: center;
+        @extend.flex-justcenter;
         transition: .5s;
         &:hover{
             transform: scale(1.1);

@@ -12,7 +12,7 @@ main section.galeria{
     column-gap: 20px;
     overflow: hidden;
     div {
-      @extend.flex-center;
+      @extend%flex-center;
       background-color:$fondogeneral;
       border: $bordesestilo;
       box-shadow:$sombraaborde;

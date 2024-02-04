@@ -25,10 +25,15 @@ body {
   align-items: center;
 }
 
-.flex-center, main section.galeria div {
+main section.galeria div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-justcenter, aside section p, aside, main .index h2, main .index h1 {
+  display: flex;
+  justify-content: center;
 }
 
 header {
@@ -92,8 +97,6 @@ main .index h1 {
   font-size: larger;
   font-weight: 700;
   padding-top: 10px;
-  display: flex;
-  justify-content: center;
   transition: 0.5s;
 }
 main .index h1:hover {
@@ -106,8 +109,6 @@ main .index h2 {
   font-size: large;
   font-weight: 700;
   margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
   transition: 0.5s;
 }
 main .index h2:hover {
@@ -128,14 +129,10 @@ aside {
   font-family: "Roboto", sans-serif;
   background-image: linear-gradient(to top, rgb(244, 242, 239), rgb(205, 196, 196));
   padding-top: 10px;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
 }
 aside section p {
   color: rgb(52, 52, 60);
-  display: flex;
-  justify-content: center;
   transition: 0.5s;
 }
 aside section p:hover {
