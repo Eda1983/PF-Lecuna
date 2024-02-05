@@ -93,7 +93,6 @@ main .index {
 }
 main .index h1 {
   font-family: "Roboto", sans-serif;
-  color: rgb(52, 52, 60);
   font-size: larger;
   font-weight: 700;
   padding-top: 10px;
@@ -105,7 +104,6 @@ main .index h1:hover {
 }
 main .index h2 {
   font-family: "Roboto", sans-serif;
-  color: rgb(52, 52, 60);
   font-size: large;
   font-weight: 700;
   margin-bottom: 30px;
@@ -132,12 +130,11 @@ aside {
   overflow: hidden;
 }
 aside section p {
-  color: rgb(52, 52, 60);
   transition: 0.5s;
 }
 aside section p:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px antiquewhite;
+  box-shadow: 0 0 10px rgb(250, 235, 215);
 }
 
 @media (max-width: 767px) {
@@ -166,14 +163,13 @@ aside section p:hover {
 }
 /*horarios*/
 .bordeau-page main {
-  background-color: rgb(112, 35, 38);
+  background-color: rgb(115, 33, 33);
   color: rgb(240, 248, 255);
 }
 .bordeau-page img.img-fluid {
   border: 2px solid rgb(104, 32, 33);
 }
 .bordeau-page h1 {
-  color: rgb(52, 52, 60);
   letter-spacing: 2px;
   padding-top: 10px;
   font-size: x-large;
@@ -214,7 +210,7 @@ aside section p:hover {
   margin-bottom: 5px;
 }
 .list-group-item:active {
-  background-color: rgb(112, 35, 38);
+  background-color: rgb(115, 33, 33);
   color: rgb(240, 248, 255);
 }
 
@@ -351,8 +347,8 @@ paddingT .fontStyle {
   color: rgb(52, 52, 60);
   font-weight: 400;
   font-size: large;
-  box-shadow: 0px 4px 2px -2px rgb(171, 168, 168);
-  border: 1px solid #a9a7a7;
+  box-shadow: 0px 20px 0px 4px 2px -2px rgb(42, 23, 23);
+  border: 1px solid 2px solid rgb(104, 32, 33);
 }
 .paddingTB form input {
   border-radius: 5px;

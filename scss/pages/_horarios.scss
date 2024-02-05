@@ -10,7 +10,7 @@ img.img-fluid {
     border:$bordesestilo;
 }
 h1 {
-    color:$colorfuente;
+    color:map-get($colores,colorfuente);
     letter-spacing: 2px;
     padding-top: 10px;
     font-size: x-large;
@@ -34,7 +34,7 @@ h1 {
 }
 }
 .grilla .celula.sin-actividad {
-    background-color: rgb(123, 121, 121); 
+    background-color:$fondo-grillasinactiv; 
  }
 
 .grilla .row {
@@ -47,7 +47,7 @@ h1 {
 /* horarios menu desplegable*/
 
 .list-group-item {
-    background-color: rgb(202, 191, 191);
+    background-color:$colorhorariodespl;
     font-family:$letrafamilia;
     font-weight: 500;
     color:$colorfuente; 

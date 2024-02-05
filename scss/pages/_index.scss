@@ -8,7 +8,7 @@ main{
        overflow: hidden;
        h1{
            font-family: $letrafamilia;
-           color:$colorfuente;
+           color:map-get($colores,colorfuente);
            font-size: larger;
            font-weight: 700;
            padding-top: 10px;
@@ -16,12 +16,12 @@ main{
            transition: .5s;
            &:hover{
                transform: scale(1.1);
-               box-shadow: 5px 5px 10px rgb(115, 33, 33) ;
+               box-shadow: 5px 5px 10px $fondo-bordeau;
            }
        }
        h2{
            font-family: $letrafamilia;
-           color:$colorfuente;
+           color:map-get($colores,colorfuente);
            font-size: large;
            font-weight: 700;
            margin-bottom: 30px;
@@ -29,7 +29,7 @@ main{
            transition: .5s;
            &:hover{
                transform: scale(1.1);
-               box-shadow: 0 0 10px rgb(115, 33, 33);
+               box-shadow: 0 0 10px $fondo-bordeau;
            }
        }
    
@@ -37,7 +37,7 @@ main{
        transition: .5s;
        &:hover{
            transform: scale(1.1);
-           box-shadow: 5px 5px 10px  rgb(115, 33, 33);
+           box-shadow: 5px 5px 10px $fondo-bordeau;
        }
        }
       }
@@ -46,17 +46,17 @@ main{
     grid-area: aside;
     height: 100%;
     font-family:$letrafamilia;
-     background-image: linear-gradient(to top, rgb(244, 242, 239),rgb(205, 196, 196));
+    background-image: linear-gradient(to top, rgb(244, 242, 239),rgb(205, 196, 196));
     padding-top: 10px;
     @extend.flex-justcenter;
     overflow: hidden;
     section p{
-        color:$colorfuente;
+        color:map-get($colores,colorfuente);
         @extend.flex-justcenter;
         transition: .5s;
         &:hover{
             transform: scale(1.1);
-            box-shadow: 0 0 10px antiquewhite;
+            box-shadow: 0 0 10px $sombra-aside;
         }
      }
 }
