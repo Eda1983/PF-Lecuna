@@ -1,11 +1,7 @@
 /*horarios*/
-
-
-.bordeau-page{ main {
-    background-color:$fondo-bordeau;
-    color:$fondoblanco;
-   
-}
+.container {
+    max-width: 100%; 
+ 
 img.img-fluid {
     border:$bordesestilo;
 }
@@ -16,13 +12,21 @@ h1 {
     font-size: x-large;
     font-weight: 900;  
 }
+
 }
 
-.grilla {.celula {
+.row {
+    margin-right: 0;
+    margin-left: 0; 
+.grilla {
+    width: 100%;
+    .celula {
+    max-width:100%;
+    white-space:nowrap;
     border:$bordesestilo;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
-    transition: transform 0.5s, overflow 0.5s;
+    transition: 0.5s, overflow 0.5s;
     overflow: hidden;
     background-color:$fondoblanco ; 
     font-family:$letrafamilia;
@@ -33,16 +37,16 @@ h1 {
     }
 }
 }
+
 .grilla .celula.sin-actividad {
     background-color:$fondo-grillasinactiv; 
+    transition: none;
+    transform: none;
+    overflow: visible;  
  }
 
-.grilla .row {
-  --bs-gutter-x: 0;
-    margin-right: 0; 
-    margin-left: 0;
-}
 
+}
 
 /* horarios menu desplegable*/
 

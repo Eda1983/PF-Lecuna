@@ -50,6 +50,7 @@ header .navbar .navbar-brand img {
 }
 header .navbar .navbar-toggler {
   border: none;
+  background-color: rgb(136, 136, 136);
 }
 
 footer {
@@ -162,43 +163,47 @@ aside section p:hover {
   }
 }
 /*horarios*/
-.bordeau-page main {
-  background-color: rgb(115, 33, 33);
-  color: rgb(240, 248, 255);
+.container {
+  max-width: 100%;
 }
-.bordeau-page img.img-fluid {
-  border: 2px solid rgb(104, 32, 33);
+.container img.img-fluid {
+  border: 1px solid rgb(104, 32, 33);
 }
-.bordeau-page h1 {
+.container h1 {
   letter-spacing: 2px;
   padding-top: 10px;
   font-size: x-large;
   font-weight: 900;
 }
 
-.grilla .celula {
-  border: 2px solid rgb(104, 32, 33);
-  padding: 10px;
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row .grilla {
+  width: 100%;
+}
+.row .grilla .celula {
+  max-width: 100%;
+  white-space: nowrap;
+  border: 1px solid rgb(104, 32, 33);
+  padding: 15px;
   text-align: center;
-  transition: transform 0.5s, overflow 0.5s;
+  transition: 0.5s, overflow 0.5s;
   overflow: hidden;
   background-color: rgb(240, 248, 255);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: rgb(52, 52, 60);
 }
-.grilla .celula:hover {
+.row .grilla .celula:hover {
   transform: scale(1.1);
 }
-
-.grilla .celula.sin-actividad {
+.row .grilla .celula.sin-actividad {
   background-color: rgb(123, 121, 121);
-}
-
-.grilla .row {
-  --bs-gutter-x: 0;
-  margin-right: 0;
-  margin-left: 0;
+  transition: none;
+  transform: none;
+  overflow: visible;
 }
 
 /* horarios menu desplegable*/
@@ -237,7 +242,7 @@ main section.galeria {
 }
 main section.galeria div {
   background-color: rgb(166, 156, 156);
-  border: 2px solid rgb(104, 32, 33);
+  border: 1px solid rgb(104, 32, 33);
   box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
 }
 main section.galeria div img {
@@ -292,7 +297,7 @@ main section.profesores div {
   justify-content: center;
   align-items: center;
   background-color: rgb(166, 156, 156);
-  border: 2px solid rgb(104, 32, 33);
+  border: 1px solid rgb(104, 32, 33);
   box-shadow: 0px 4px 2px -2px rgb(42, 23, 23);
   padding-bottom: 10px;
 }
@@ -348,7 +353,7 @@ paddingT .fontStyle {
   font-weight: 400;
   font-size: large;
   box-shadow: 0px 20px 0px 4px 2px -2px rgb(42, 23, 23);
-  border: 1px solid 2px solid rgb(104, 32, 33);
+  border: 1px solid 1px solid rgb(104, 32, 33);
 }
 .paddingTB form input {
   border-radius: 5px;
