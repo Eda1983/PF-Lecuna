@@ -1,8 +1,27 @@
 
 
 /* Galeria*/
-                   
-main section.galeria{
+   main{
+    
+  .encabezadoGaleria{
+  
+  .container {
+    max-width: 100%; 
+ 
+  img.img-fluid {
+    border:$bordesestilo;
+  }
+  h1 {
+    color:beige;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    font-size: x-large;
+    font-weight: 900;  
+   }
+
+  }  
+ }            
+   .galeria{
     display: grid; 
     grid-template-columns:300px 300px;
     grid-template-rows: 350px 350px 350px 350px;
@@ -12,7 +31,7 @@ main section.galeria{
     column-gap: 20px;
     overflow: hidden;
     div {
-      @extend%flex-center;
+      @extend.flex-center;
       background-color:$fondogeneral;
       border: $bordesestilo;
       box-shadow:$sombraaborde;
@@ -25,6 +44,7 @@ main section.galeria{
         }
   }
   
+}
 }
 @media (max-width: 767px){
     main section.galeria{

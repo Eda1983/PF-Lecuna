@@ -1,7 +1,26 @@
-/*Profesores*/
+/*Profesores*/ 
+main{
+    .encabezadoProfesores{
+  
+        .container {
+          max-width: 100%; 
+       
+        img.img-fluid {
+          border:$bordesestilo;
+        }
+        h1 {
+          color:beige;
+          letter-spacing: 2px;
+          padding-top: 10px;
+          font-size: x-large;
+          font-weight: 900;  
+         }
+      
+        }  
+       }            
 
-main section.profesores{
-    display: grid; 
+   section.profesores{
+    display: grid;
     grid-template-columns:300px 300px;
     grid-template-rows:auto auto;
     justify-content: center;
@@ -19,6 +38,7 @@ main section.profesores{
             justify-content: center;
             align-items: flex-start;
             font-family:$letrafamilia;
+            font-weight: 500;
         } 
         img{
             justify-content: center;
@@ -31,6 +51,20 @@ main section.profesores{
   
 }
 
+}
+aside{
+    height: 100%;
+    font-family:$letrafamilia;
+    background-image: linear-gradient(to top, rgb(244, 242, 239),rgb(205, 196, 196));
+    padding-top: 10px;
+    @extend.flex-justcenter;
+    section p{
+        color:map-get($colores,colorfuente);
+        @extend.flex-justcenter;
+        box-shadow: 0 0 10px $sombra-aside;
+        }
+     }
+  
 @media (max-width: 767px){
     main section.profesores{
         display: grid; 
@@ -44,5 +78,10 @@ main section.profesores{
             height: 220px;
           }       
     }
+
+    aside p{
+        padding-top: 10px;
+        font-size: 12px;
+       }
 
 }

@@ -1,27 +1,45 @@
-footer{
-    display: flex;
-    grid-area: footer;
-    justify-content: center;
-    background-color: rgb(135, 129, 129);
-    p{
-        font-family: 'Roboto', sans-serif;
-        font-size:larger;
-        font-weight: 700;
-    }
-    
-    
-} 
+footer {
+  section {
+      height: 250px;
+      display: flex;
+      flex-direction: column; // Cambiado para colocar los elementos en columna
+      justify-content: space-around; // Ajuste para espacio vertical entre elementos
+      align-items: center;
+      background-color: rgb(135, 129, 129);
+
+      p {
+          font-family: 'Roboto', sans-serif;
+          font-size: larger;
+          font-weight: 700;
+      }
+
+      .redes {
+          display: flex;
+          gap: 10px; // Ajuste para espacio horizontal entre iconos
+          a {
+              text-decoration: none;
+              img {
+                  width: 50px;
+                  height: 50px;
+              }
+          }
+      }
+  }
+}
+// tablet
 @media (max-width: 767px){
     footer { 
-      padding: 10px; 
+     
       text-align: center; 
       p {
         font-size: 14px; 
       }
     }
 }
+//dispositivos pequeños
 @media (max-width:480px){
     footer.horarios{
+   
         display:flex;
         align-items: start;
         p {

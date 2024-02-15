@@ -1,53 +1,58 @@
 /*horarios*/
-.container {
-    max-width: 100%; 
- 
-img.img-fluid {
-    border:$bordesestilo;
-}
-h1 {
-    color:map-get($colores,colorfuente);
-    letter-spacing: 2px;
-    padding-top: 10px;
-    font-size: x-large;
-    font-weight: 900;  
-}
 
-}
-
-.row {
-    margin-right: 0;
-    margin-left: 0; 
-.grilla {
-    width: 100%;
-    .celula {
-    max-width:100%;
-    white-space:nowrap;
-    border:$bordesestilo;
-    padding: 15px;
-    text-align: center;
-    transition: 0.5s, overflow 0.5s;
-    overflow: hidden;
-    background-color:$fondoblanco ; 
-    font-family:$letrafamilia;
-    font-weight: 500;
-    color:$colorfuente; 
-    &:hover {
-        transform: scale(1.1);
+main{
+  .horarios{
+  .container {
+      max-width: 100%; 
+   
+  img.img-fluid {
+      border:$bordesestilo;
+  }
+  h1 {
+      color:beige;
+      letter-spacing: 2px;
+      padding-top: 10px;
+      font-size: x-large;
+      font-weight: 900;  
+  }
+  
+  }
+  
+  .row {
+      margin-right: 0;
+      margin-left: 0; 
+  .grilla {
+      width: 100%;
+      .celula {
+      max-width:100%;
+      white-space:nowrap;
+      border:$bordesestilo;
+      padding: 15px;
+      text-align: center;
+      transition: 0.5s, overflow 0.5s;
+      overflow: hidden;
+      background-color:$fondoblanco ; 
+      font-family:$letrafamilia;
+      font-weight: 500;
+      color:$colorfuente; 
+      cursor: pointer;
+      &:hover {
+          transform: scale(1.1);
+      }
     }
-}
-}
-
-.grilla .celula.sin-actividad {
-    background-color:$fondo-grillasinactiv; 
-    transition: none;
-    transform: none;
-    overflow: visible;  
- }
-
-
-}
-
+   }
+  
+  .grilla .celula.sin-actividad {
+      background-color:$fondo-grillasinactiv; 
+      transition: none;
+      transform: none;
+      overflow: visible;  
+     }
+  
+    }
+   }
+  }
+  
 /* horarios menu desplegable*/
 
 .list-group-item {
@@ -71,6 +76,6 @@ h1 {
     /*aside horarios*/
 
     aside p{
-        font-size: smaller;
+        font-size:5px;
     }
-}
+ }

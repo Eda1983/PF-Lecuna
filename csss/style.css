@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -9,7 +10,19 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.flex-columnCenter, .texto-y-formulario form .button, .texto-y-formulario form .campos, .texto-y-formulario form {
+main {
+  min-height: 100vh; /* Ajusta la altura mínima según tus necesidades */
+}
+
+@media (max-width: 480px) {
+  body {
+    display: grid;
+    grid-template-columns: auto 50px auto;
+    grid-template-rows: 121px auto 121px;
+    grid-template-areas: "header header header " "main main aside" "footer footer footer";
+  }
+}
+.flex-columnCenter, .paddingTB form .button, .paddingTB form .campos, .paddingTB form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +40,7 @@ body {
 }
 
 header {
+  grid-area: header;
   position: relative;
 }
 header .navbar {
@@ -42,33 +56,26 @@ header .navbar .navbar-toggler {
   background-color: rgb(136, 136, 136);
 }
 
-footer section {
+footer {
   height: 250px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   background-color: rgb(135, 129, 129);
 }
-footer section p {
+footer p {
   font-family: "Roboto", sans-serif;
   font-size: larger;
   font-weight: 700;
+  padding-top: 20px;
 }
-footer section .redes {
-  display: flex;
-  gap: 10px;
-}
-footer section .redes a {
-  text-decoration: none;
-}
-footer section .redes a img {
+footer img {
   width: 50px;
   height: 50px;
 }
 
 @media (max-width: 767px) {
   footer {
+    padding: 10px;
     text-align: center;
   }
   footer p {
@@ -86,6 +93,7 @@ footer section .redes a img {
 }
 main {
   margin: 0;
+  margin-bottom: 89px;
 }
 main .img-container {
   position: relative;
@@ -106,56 +114,57 @@ main .img-container .img-overlay {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
-  background: rgba(247, 245, 245, 0.5);
 }
 main .img-container .img-overlay h1 {
   font-family: "Roboto", sans-serif;
   color: rgb(47, 44, 44);
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(84, 43, 43, 0.7);
-  padding-top: 100px;
   padding-bottom: 10px;
 }
 main .img-container .img-overlay p {
   font-family: "Roboto", sans-serif;
   color: rgb(47, 44, 44);
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 300;
   text-shadow: 2px 2px 4px rgba(84, 43, 43, 0.7);
-  padding-top: 20px;
+  padding-top: 10px;
 }
-@media (max-width: 1024px) {
-  main .img-container .img-overlay h1 {
-    font-size: 40px;
-  }
-  main .img-container .img-overlay p {
-    font-size: 30px;
-  }
+
+.gradiente-linea {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(128, 128, 128) 100%);
+  z-index: 1;
 }
+
+.gradiente-linea-abajo-carrusel {
+  top: 222%;
+}
+
 @media (max-width: 767px) {
-  main .img-container .img-overlay h1 {
-    font-size: 30px;
-    font-weight: 400;
-    padding-top: 120px;
+  .hover-effect {
+    min-height: 500px;
   }
-  main .img-container .img-overlay p {
-    font-size: 20px;
-    font-weight: 500;
+  main section.index h1 {
+    font-size: smaller;
+  }
+  main section.index p {
+    font-size: smaller;
   }
 }
 @media (max-width: 480px) {
-  main .img-container .img-overlay h1 {
-    font-size: 20px;
-    font-weight: 500;
+  main section.index h1 {
+    padding-top: 20px;
+    font-size: smaller;
   }
-  main .img-container .img-overlay p {
-    font-size: 20px;
-    font-weight: 500;
-    padding-top: 5px;
+  main section.index p {
+    font-size: smaller;
   }
 }
-
 /*horarios*/
 main .horarios .container {
   max-width: 100%;
@@ -221,7 +230,7 @@ main .horarios .row .grilla .celula.sin-actividad {
   }
   /*aside horarios*/
   aside p {
-    font-size: 5px;
+    font-size: smaller;
   }
 }
 /* Galeria*/
@@ -326,7 +335,6 @@ main section.profesores div p {
   justify-content: center;
   align-items: flex-start;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
 }
 main section.profesores div img {
   justify-content: center;
@@ -335,12 +343,18 @@ main section.profesores div img {
 }
 
 aside {
+  grid-area: aside;
   height: 100%;
   font-family: "Roboto", sans-serif;
   background-image: linear-gradient(to top, rgb(244, 242, 239), rgb(205, 196, 196));
   padding-top: 10px;
+  overflow: hidden;
 }
 aside section p {
+  transition: 0.5s;
+}
+aside section p:hover {
+  transform: scale(1.1);
   box-shadow: 0 0 10px rgb(250, 235, 215);
 }
 
@@ -359,33 +373,45 @@ aside section p {
   }
   aside p {
     padding-top: 10px;
-    font-size: 12px;
+    font-size: small;
   }
 }
-.texto-y-formulario {
-  text-align: center;
+.paddingT {
+  padding-top: 50px;
 }
-.texto-y-formulario .contactate-texto {
+.paddingT .fontStyle {
+  font-family: "Roboto", sans-serif;
   color: beige;
+  font-weight: 500;
   font-size: xx-large;
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
-.texto-y-formulario form {
+
+.centrar {
+  text-align: center;
+}
+
+.paddingTB {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.paddingTB form {
   font-family: "Roboto", sans-serif;
   color: beige;
   font-weight: 400;
   font-size: large;
   box-shadow: 0px 20px 0px 4px 2px -2px rgb(42, 23, 23);
   border: 1px solid 1px solid rgb(104, 32, 33);
-  width: 100%;
 }
-.texto-y-formulario form input {
+.paddingTB form input {
   border-radius: 5px;
 }
-.texto-y-formulario form .campos {
+.paddingTB form .campos {
   gap: 10px;
 }
-.texto-y-formulario form .button {
+.paddingTB form .button {
   color: rgb(237, 241, 245);
   border-radius: 5px;
   margin-top: 10px;
@@ -396,11 +422,6 @@ aside section p {
 .col-lg-6 {
   padding-right: 0px;
   padding-left: 0px;
-}
-
-.mx-auto {
-  margin-right: auto !important;
-  margin-left: auto !important;
 }
 
 /*# sourceMappingURL=style.css.map */
